@@ -23,6 +23,6 @@ variable "Fruits_with_quantity" {
   }
 }
 
-output "fruits_apple_quantity" {
+output "Fruits_apple_quantity" {
   value = var.fruits_with_quantity["apple"]
 }
