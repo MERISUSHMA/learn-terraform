@@ -14,7 +14,7 @@ output "fruits_first_fruit" {
   value = var.fruits[0]
 }
 
-variable "Fruits_with_quantity" {
+variable "fruits_with_quantity" {
   default = {
     apple = 100
     banana = 200
@@ -24,5 +24,8 @@ variable "Fruits_with_quantity" {
 }
 
 output "Fruits_apple_quantity" {
-  value = var.Fruits_with_quantity["apple"]
+  value = var.fruits_with_quantity["apple"]
 }
+ output "fruits_apple_quantity_with_name" {
+   value = "Fruits Apple is having only ${var.fruits_with_quantity["apple"]} quantity"
+ }
