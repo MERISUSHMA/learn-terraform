@@ -21,7 +21,7 @@ resource "aws_instance" "backend" {
   instance_type = var.instance_type
   vpc_security_group_ids = var.sg_id
   tags = {
-    Name = "backend-${var.env}"
+    Name = "backend"
   }
 
 }
@@ -38,7 +38,7 @@ resource "aws_instance" "mysql" {
   instance_type = var.instance_type
   vpc_security_group_ids = var.sg_id
   tags = {
-    Name = "mysql-${var.env}"
+    Name = "mysql"
   }
 
 }
@@ -49,4 +49,3 @@ resource "aws_route53_record" "mysql" {
   ttl     = 30
   records = [aws_instance.mysql.private_ip]
 }
-
