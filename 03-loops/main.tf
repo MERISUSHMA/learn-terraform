@@ -30,3 +30,6 @@ variable "instances1" {
     }
   }
 }
+resource "null_resource" "sample1" {
+  for_each = var.instances1
+}
