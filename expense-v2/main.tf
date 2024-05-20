@@ -21,7 +21,7 @@ resource "aws_instance" "backend" {
   instance_type = var.instance_type
   vpc_security_group_ids = var.sg_id
   tags = {
-    Name = "backend"
+    Name = "backend-${var.env}"
   }
 
 }
@@ -38,7 +38,7 @@ resource "aws_instance" "mysql" {
   instance_type = var.instance_type
   vpc_security_group_ids = var.sg_id
   tags = {
-    Name = "mysql"
+    Name = "mysql-${var.env}"
   }
 
 }
