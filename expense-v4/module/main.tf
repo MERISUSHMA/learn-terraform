@@ -7,7 +7,7 @@ resource "aws_instance" "instance" {
   }
 }
 
-resource "aws_route53_record" "frontend" {
+resource "aws_route53_record" "record" {
   zone_id  =var.zone_id
   name     = "${var."name"}-${var.env}"
   type     = "A"
