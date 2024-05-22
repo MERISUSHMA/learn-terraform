@@ -9,7 +9,7 @@ resource "aws_instance" "instance" {
 
 resource "aws_route53_record" "record" {
   zone_id  =var.zone_id
-  name     = "${var."name"}-${var.env}"
+  name     = "${var.name}-${var.name}"
   type     = "A"
   ttl      = 30
   records = [aws_instance.instance.private_ip]
